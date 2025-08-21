@@ -3,44 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bijaya Bhagwati Dhuwani Sewa </title>
+    <title>Bijaya Bhagwati Dhuwani Sewa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
 
 <div class="header">
-  <img src="images/logo.png" alt="Logo" class="logo-1">
+    <img src="images/BijayaBhagwati.png" alt="Logo" class="logo-1">
+    
+    <h1 class="side-title">Bijaya Bhagwati Dhuwani Sewa</h1>
 
-  <h1 class="side-title">Bijaya Bhagwati Dhuwani Sewa</h1>
-
-  <nav id="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#" data-tab="home" class="tab-link active">Home</a></li>
+            <li><a href="#" data-tab="about" class="tab-link">About Us</a></li>
+            <li><a href="#" data-tab="services" class="tab-link">Services</a></li>
+            <li><a href="#" data-tab="contact" class="tab-link">Contact</a></li>
+        </ul>
+    </nav>
 
     <button id="hamburger">
-        
         <span></span>
         <span></span>
         <span></span>
     </button>
 
     <div id="menu" class="hidden">
-        <a href="#">About us</a>
-        <a href="#">Contacts</a>
-        <a href="#">Services</a>
+        <a href="#" data-tab="home" class="tab-link">Home</a>
+        <a href="#" data-tab="about" class="tab-link">About Us</a>
+        <a href="#" data-tab="services" class="tab-link">Services</a>
+        <a href="#" data-tab="contact" class="tab-link">Contact</a>
     </div>
-
 </div>
 
 <div class="content">
-
-  </div>
+    <!-- Home Tab -->
+    <div id="home" class="tab-content active">
+        <div class="hero-section">
+            <h1 class="hero-title">Welcome to Bijaya Bhagwati Dhuwani Sewa</h1>
+            <p class="hero-subtitle">
+                Providing exceptional truck transportation services to you with safe, 
+                reliable, and cost-effective logistics solutions — whether it's local deliveries, long-haul freight, 
+                or bulk cargo transport, we ensure timely delivery, secure handling, and trusted service every mile of the way.
+            </p>
+            <a href="#" class="cta-button" data-tab="services">Explore Our Services</a>
+        </div>
+        
+        <!-- Truck Gallery Section -->
+      <div class="truck-gallery">
+        <h2 class="gallery-title">Our Trucks</h2>
+        <div class="gallery-container">
     
+          <div class="truck-card">
+            <img src="images/truck.jpeg" alt="Truck 1">
+            <h3>Truck 1</h3>
+            <p>Number: BA 2 KHA 1234</p>
+          </div>
+
+          <div class="truck-card">
+            <img src="images/truck.jpeg" alt="Truck 2">
+            <h3>Truck 2</h3>
+            <p>Number: BA 2 KHA   5678</p>
+          </div>
+
+          <div class="truck-card">
+            <img src="images/truck.jpeg" alt="Truck 3">
+            <h3>Truck 3</h3>
+            <p>Number: BA 2 KHA   9101</p>  
+          </div>
+
+          <div class="truck-card">
+            <img src="images/truck.jpeg" alt="Truck 1">
+            <h3>Truck 1</h3>
+            <p>Number: BA 2 KHA 1234</p>
+          </div>
+
+          <div class="truck-card">
+            <img src="images/truck.jpeg" alt="Truck 2">
+            <h3>Truck 2</h3>
+            <p>Number: BA 2 KHA   5678</p>
+          </div>
+
+          <div class="truck-card">
+            <img src="images/truck.jpeg" alt="Truck 3">
+            <h3>Truck 3</h3>
+            <p>Number: BA 2 KHA   9101</p>  
+          </div>
+
+          <div class="truck-card">
+            <img src="images/truck.jpeg" alt="Truck 1">
+            <h3>Truck 1</h3>
+            <p>Number: BA 2 KHA 1234</p>
+          </div>
+
+          <div class="truck-card">
+            <img src="images/truck.jpeg" alt="Truck 2">
+            <h3>Truck 2</h3>
+            <p>Number: BA 2 KHA   5678</p>
+          </div>
+
+          <div class="truck-card">
+            <img src="images/truck.jpeg" alt="Truck 3">
+            <h3>Truck 3</h3>
+            <p>Number: BA 2 KHA   9101</p>  
+          </div>
+    
+    <!-- Add more trucks as needed -->
+  </div>
+</div>
+
+    </div>
+
+    <!-- About Us Tab -->
+    <div id="about" class="tab-content">
+        <h2 class="section-title">About Us</h2>
+        <div class="card">
+            <h3>Our Story</h3>
+            <p>
+                Bijaya Bhagwati Dhuwani Sewa has 
+            </p>
+            <p>
+                Our commitment
+            </p>
+        </div>
+        
+        <div class="card-grid">
+            <div class="card">
+                <h3>Our Mission</h3>
+                <p>To provide .</p>
+            </div>
+            <div class="card">
+                <h3>Our Vision</h3>
+                <p>To be the leading .</p>
+            </div>
+            <div class="card">
+                <h3>Our Values</h3>
+                <p>Quality, professionalism, reliability, and customer-first approach guide everything we do.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Tab -->
+    <div id="services" class="tab-content">
+        <h2 class="section-title">Our Services</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>1st</h3>
+                <p>Professional .</p>
+                <ul style="color: #666; margin-top: 15px; padding-left: 20px;">
+                    <li>here</li>
+                    <li>here</li>
+                    <li>here</li>
+                    <li>ok</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>2nd</h3>
+                <p>Complete.</p>
+                <ul style="color: #666; margin-top: 15px; padding-left: 20px;">
+                    <li>here</li>
+                    <li>here</li>
+                    <li>here</li>
+                    <li>ok</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>3rd</h3>
+                <p>Complete.</p>
+                <ul style="color: #666; margin-top: 15px; padding-left: 20px;">
+                    <li>here</li>
+                    <li>here</li>
+                    <li>here</li>
+                    <li>ok</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>4th</h3>
+                <p>Specialized .</p>
+                <ul style="color: #666; margin-top: 15px; padding-left: 20px;">
+                    <li>here</li>
+                    <li>here</li>
+                    <li>here</li>
+                    <li>ok</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Tab -->
+    <div id="contact" class="tab-content">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="message">Additional Details</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your requirements..."></textarea>
+                </div>
+                
+                <button type="submit" class="cta-button" style="width: 100%;">Send Inquiry</button>
+            </form>
+        </div>
+        
+        <div class="card-grid" style="margin-top: 40px;">
+            <div class="card">
+                <h3>📞 Phone</h3>
+                <p>Call us for immediate assistance</p>
+                <p style="font-weight: bold; color: #A50021;">+977-XXXX-XXXXXX</p>
+            </div>
+            
+            <div class="card">
+                <h3>📍 Location</h3>
+                <p>Visit our office for consultation</p>
+                <p style="color: #666;">Kathmandu, Nepal</p>
+            </div>
+            
+            <div class="card">
+                <h3>⏰ Business Hours</h3>
+                <p>We're here to help you</p>
+                <p style="color: #666;">Daily: 9:00 AM - 8:00 PM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

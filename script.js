@@ -117,3 +117,19 @@ rightBtn.addEventListener('click', () => {
 
     switchTab('home');
 });
+
+document.querySelectorAll('.tab-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const tab = this.getAttribute('data-tab');
+
+    // Tab switching logic
+    document.querySelectorAll('.tab-link').forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+    document.getElementById(tab).classList.add('active');
+
+    // Scroll all the way to the top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});

@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 30px 20px;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-banner p {
+    font-size: 1rem;
+  }
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -534,6 +548,50 @@ nav ul li a.active:hover {
     justify-content: center;
     gap: 20px;
   }
+}
+
+.cta-banner {
+  background: linear-gradient(135deg, rgba(165, 0, 33, 0.1), rgba(255, 215, 0, 0.1));
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 60px auto;
+  max-width: 1000px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-banner:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-banner h2 {
+  font-size: 2.2rem;
+  color: #A50021;
+  margin-bottom: 15px;
+}
+
+.cta-banner p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.cta-banner .cta-button {
+  background: linear-gradient(90deg, #A50021, #FFD700);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-banner .cta-button:hover {
+  background: linear-gradient(90deg, #FFD700, #A50021);
 }
 
 

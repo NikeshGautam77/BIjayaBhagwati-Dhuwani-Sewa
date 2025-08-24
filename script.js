@@ -33,6 +33,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+// Truck gallery scroll buttons
+const leftBtn = document.querySelector('.left-btn');
+const rightBtn = document.querySelector('.right-btn');
+const gallery = document.querySelector('.gallery-container');
+
+leftBtn.addEventListener('click', () => {
+  gallery.scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+rightBtn.addEventListener('click', () => {
+  gallery.scrollBy({ left: 300, behavior: 'smooth' });
+});
+
+
     // Hamburger menu functionality
     hamburger.addEventListener('click', function() {
         menu.classList.toggle('show');
@@ -69,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Success message
-            alert(`Thank you ${name}! We will contact you soon regarding your ${eventType || 'event'}.`);
+            alert(`Thank you ${name}! We will contact you soon regarding your ${eventType || 'request'}.`);
             this.reset();
         });
     }

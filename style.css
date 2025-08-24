@@ -23,10 +23,15 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     transition: all 0.3s ease;
+    border-radius: 0% 0 10px 10px;
 }
 
 .header:hover {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    
+   transform: scale(1.02);
+    background: linear-gradient(135deg, #A50021 0%, #8B0020 100%);
+
 }
 
 .logo-1 {
@@ -314,7 +319,7 @@ nav ul li a.active:hover {
     margin-bottom: 40px;
 }
 .hero-section:hover{
-  transform: scale(1.1); /* makes logo come forward */
+  transform: scale(1.05); /* makes logo come forward */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* adds depth effect */
 }
 .hero-section {
@@ -369,7 +374,7 @@ nav ul li a.active:hover {
 .truck-card {
   flex: 0 0 auto;
   width: 250px;
-  background: #fff;
+  background: linear-gradient(135deg, rgba(165, 0, 33, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
@@ -399,6 +404,138 @@ nav ul li a.active:hover {
   color: #666;
   font-size: 0.9rem;
 }
+.gallery-wrapper {
+  position: relative;
+}
+
+.gallery-btn {
+  position: absolute;
+  bottom: 10px; /* bottom of gallery */
+  background:black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+  margin-left: 5px; /* space between buttons */
+}
+
+.gallery-btn:hover {
+  transform: scale(1.05);
+  background: #332d2e; /* change to a more visible color on hover */
+}
+
+/* Position both buttons together at bottom-right */
+.left-btn {
+  right: 60px; 
+  top: 250px;
+}
+
+.right-btn {
+  right: 10px;
+  top: 250px;
+}
+
+
+
+/* Truck Feature Card */
+.truck-feature {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e2e8f0 100%);
+}
+.truck-feature:hover{
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+.truck-feature {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(165, 0, 33, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+.feature-image img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-text h2 {
+  font-size: 2rem;
+  color: #A50021;
+  margin-bottom: 15px;
+}
+
+.feature-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.feature-text hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.feature-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-stats .stat {
+  text-align: center;
+}
+
+.feature-stats .stat h3 {
+  font-size: 1.5rem;
+  color: #A50021;
+  margin-bottom: 5px;
+}
+
+.feature-stats .stat p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feature-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-text {
+    margin-top: 20px;
+  }
+
+  .feature-stats {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
 
 /* Call to Action Button */
 .cta-button {

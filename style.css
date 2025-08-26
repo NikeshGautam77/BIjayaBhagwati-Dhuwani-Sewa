@@ -9,6 +9,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
+    
+
+}
+.container {
+    max-width: 1200px; /* adjust width */
+    margin: 0 auto;    /* centers the container */
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .header {

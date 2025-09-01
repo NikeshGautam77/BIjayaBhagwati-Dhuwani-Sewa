@@ -118,6 +118,36 @@ rightBtn.addEventListener('click', () => {
     switchTab('home');
 });
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+ 
+
+    const header = document.querySelector('.header');
+
+    // Shrink header on scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 30) {
+            header.classList.add('small');
+        } else {
+            header.classList.remove('small');
+        }
+    });
+
+    // Expand header on hover
+    header.addEventListener('mouseenter', function() {
+        header.classList.remove('small');
+    });
+
+    // Shrink again when mouse leaves and scrolled down
+    header.addEventListener('mouseleave', function() {
+        if (window.scrollY > 30) {
+            header.classList.add('small');
+        }
+    });
+
+});
+
 document.querySelectorAll('.tab-link').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();

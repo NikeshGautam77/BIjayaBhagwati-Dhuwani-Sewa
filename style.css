@@ -13,11 +13,25 @@ body {
 
 }
 .container {
-    max-width: 1200px; /* adjust width */
-    margin: 0 auto;    /* centers the container */
+    max-width: 1200px; 
+    margin: 0 auto;  
     padding-left: 5px;
     padding-right: 5px;
 }
+
+
+.header.small {
+    padding: 4px 20px;
+    transition: all 0.1s ease;
+}
+.header.small .logo-1 {
+    height: 55px;
+    width: 55px;
+}
+.header.small .side-title {
+    font-size: clamp(14px, 2vw, 22px);
+}
+
 
 .header {
     position: fixed;
@@ -31,7 +45,11 @@ body {
     color: #FFD700;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: 
+        padding 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s,
+        background 0.3s,
+        border-radius 0.3s;
     border-radius: 0% 0 10px 10px;
 }
 
@@ -457,7 +475,7 @@ nav ul li a.active:hover {
   background: linear-gradient(135deg, #f5f7fa 0%, #e2e8f0 100%);
 }
 .truck-feature:hover{
-  transform: scale(1.05); 
+  transform: scale(1.02); 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 }
 .truck-feature {
@@ -527,6 +545,8 @@ nav ul li a.active:hover {
   font-size: 0.9rem;
   color: #666;
 }
+
+
 
 /* Responsive */
 @media (max-width: 768px) {

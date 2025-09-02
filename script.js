@@ -134,12 +134,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Expand header on hover
+    
     header.addEventListener('mouseenter', function() {
         header.classList.remove('small');
     });
 
-    // Shrink again when mouse leaves and scrolled down
     header.addEventListener('mouseleave', function() {
         if (window.scrollY > 30) {
             header.classList.add('small');

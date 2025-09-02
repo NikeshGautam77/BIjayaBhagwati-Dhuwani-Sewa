@@ -605,9 +605,7 @@ nav ul li a.active:hover {
   transition: background 0.3s ease;
 }
 
-.cta-banner .cta-button:hover {
-  background: linear-gradient(90deg, #FFD700, #A50021);
-}
+
 
 @media (max-width: 768px) {
   .cta-banner {

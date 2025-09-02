@@ -648,6 +648,61 @@ nav ul li a.active:hover {
   border-radius: 20px;
 }
 
+/* MD PHOTO */
+.team-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ebe1e1;
+  border-radius: 12px; /* Rounded edges like cards */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Subtle shadow */
+  margin: 50px auto;
+  max-width: 1100px; /* Keeps it aligned with other sections */
+}
+
+.team-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #A50021; /* Brand color */
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  max-width: 250px;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #FFD700;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s;
+}
+
+.team-member img:hover {
+  border-color: #FFA500;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+}
+
+.team-member h3 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.team-member p {
+  font-size: 16px;
+  color: #666;
+}
+
+
+/* Footer Styles */
 
 .site-footer {
   width: 100%;

@@ -907,6 +907,28 @@ nav ul li a.active:hover {
         color: white;
     }
 }
+.form-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    display: none; /* hidden until shown */
+}
+
+.form-message.success {
+    background: #e6ffed;
+    color: #22863a;
+    border: 1px solid #22863a;
+}
+
+.form-message.error {
+    background: #ffe6e6;
+    color: #a50021;
+    border: 1px solid #a50021;
+}
+
+
 
 /* Additional map*/
 .map-section {

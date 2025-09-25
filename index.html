@@ -375,16 +375,11 @@
 
 
 
-
-
-
-
-
     <!-- Contact Tab -->
     <div id="contact" class="tab-content">
-        <h2 class="section-title">Contact Us</h2>
+      <h2 class="section-title">Contact Us</h2>
         <div class="contact-form">
-            <form>
+            <form action="save_contact.php" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required>
@@ -400,51 +395,56 @@
                     <input type="email" id="email" name="email">
                 </div>
                 
-                
                 <div class="form-group">
                     <label for="message">Additional Details</label>
                     <textarea id="message" name="message" rows="5" placeholder="Tell us about your requirements..."></textarea>
                 </div>
                 
                 <button type="submit" class="cta-button" style="width: 100%;">Send Inquiry</button>
+
+                <!-- 🔹 Success/Error messages stay INSIDE form -->
+                <div class="form-message success">✅ Your inquiry has been sent successfully!</div>
+                <div class="form-message error">❌ Something went wrong. Please try again.</div>
             </form>
         </div>
-        
-        <div class="card-grid" style="margin-top: 40px;">
-            <div class="card">
-                <h3>📞 Phone</h3>
-                <p>Call us for immediate assistance</p>
-                <p style="font-weight: bold; color: #A50021;">+977 980-2761542</p>
-                <p style="font-weight: bold; color: #A50021;">+977 980-2771031</p>
-            </div>
-            
-            <div class="card">
-                <h3>📍 Location</h3>
-                <p>Visit our office for consultation</p>
-                <p style="color: #666;">Itahari,Sunsari Nepal</p>
-            </div>
-            
-            <div class="card">
-                <h3>⏰ Business Hours</h3>
-                <p>We're here to help you</p>
-                <p style="color: #666;">Daily: 9:00 AM - 8:00 PM</p>
-            </div>
-        </div>
-        <div class="map-section">
-        <h2 class="section-title">Visit Us at Our Itahari Office</h2>
-        <h4 style="color:linear-gradient(135deg, #A50021 0%, #FFD700 100%);; margin-bottom: 20px;">Room No. 12 — Bijaya Bhagwati Dhuwani Sewa</h4>
+      </div>
 
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps?q=26.637194,87.274389&hl=en&z=15&output=embed"
-              width="100%"
-              height="400"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+          
+          <div class="card-grid" style="margin-top: 40px;">
+              <div class="card">
+                  <h3>📞 Phone</h3>
+                  <p>Call us for immediate assistance</p>
+                  <p style="font-weight: bold; color: #A50021;">+977 980-2761542</p>
+                  <p style="font-weight: bold; color: #A50021;">+977 980-2771031</p>
+              </div>
+              
+              <div class="card">
+                  <h3>📍 Location</h3>
+                  <p>Visit our office for consultation</p>
+                  <p style="color: #666;">Itahari,Sunsari Nepal</p>
+              </div>
+              
+              <div class="card">
+                  <h3>⏰ Business Hours</h3>
+                  <p>We're here to help you</p>
+                  <p style="color: #666;">Daily: 9:00 AM - 8:00 PM</p>
+              </div>
           </div>
+          <div class="map-section">
+          <h2 class="section-title">Visit Us at Our Itahari Office</h2>
+          <h4 style="color:linear-gradient(135deg, #A50021 0%, #FFD700 100%);; margin-bottom: 20px;">Room No. 12 — Bijaya Bhagwati Dhuwani Sewa</h4>
+
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps?q=26.637194,87.274389&hl=en&z=15&output=embed"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
   </div>
 
 </div>

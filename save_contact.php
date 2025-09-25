@@ -1,31 +1,29 @@
 <?php
 $servername = "localhost";
-$username = "root"; // default in XAMPP
-$password = ""; // leave empty unless you set one
-$dbname = "my_website";
+$username = "root"; 
+$password = ""; 
+$dbname = "my_website"; 
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Get form values
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+// Get form values safely
+$name = $conn->real_escape_string($_POST['name']);
+$phone = $conn->real_escape_string($_POST['phone']);
+$email = $conn->real_escape_string($_POST['email']);
+$message = $conn->real_escape_string($_POST['message']);
 
-// Insert into database
+// Insert
 $sql = "INSERT INTO contact_form (name, phone, email, message) 
         VALUES ('$name', '$phone', '$email', '$message')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Message submitted successfully!";
+    echo "✅ Message submitted successfully!";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "❌ Error: " . $conn->error;
 }
 
 $conn->close();

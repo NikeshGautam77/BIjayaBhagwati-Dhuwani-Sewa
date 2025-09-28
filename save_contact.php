@@ -1,10 +1,10 @@
 <?php
+// Database connection
 $servername = "localhost";
-$username = "root"; // default in XAMPP
-$password = ""; // leave empty unless you set one
-$dbname = "my_website";
+$username = "root"; 
+$password = ""; 
+$dbname = "my_website"; 
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
@@ -12,11 +12,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Get form values
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+// Collect form data safely
+$name = $conn->real_escape_string($_POST['name']);
+$phone = $conn->real_escape_string($_POST['phone']);
+$email = $conn->real_escape_string($_POST['email']);
+$message = $conn->real_escape_string($_POST['message']);
 
 // Insert into database
 $sql = "INSERT INTO contact_form (name, phone, email, message) 
@@ -27,6 +27,7 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
 
 $conn->close();
 ?>

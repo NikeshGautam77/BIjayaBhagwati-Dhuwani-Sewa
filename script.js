@@ -1,4 +1,3 @@
-
 // Tab functionality
 document.addEventListener('DOMContentLoaded', function() {
     const tabLinks = document.querySelectorAll('.tab-link');
@@ -34,19 +33,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-// Truck gallery scroll buttons
-const leftBtn = document.querySelector('.left-btn');
-const rightBtn = document.querySelector('.right-btn');
-const gallery = document.querySelector('.gallery-container');
+    // Truck gallery scroll buttons
+    const leftBtn = document.querySelector('.left-btn');
+    const rightBtn = document.querySelector('.right-btn');
+    const gallery = document.querySelector('.gallery-container');
 
-leftBtn.addEventListener('click', () => {
-  gallery.scrollBy({ left: -300, behavior: 'smooth' });
-});
+    if (leftBtn && rightBtn && gallery) {
+        leftBtn.addEventListener('click', () => {
+            gallery.scrollBy({ left: -300, behavior: 'smooth' });
+        });
 
-rightBtn.addEventListener('click', () => {
-  gallery.scrollBy({ left: 300, behavior: 'smooth' });
-});
-
+        rightBtn.addEventListener('click', () => {
+            gallery.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+    }
 
     // Hamburger menu functionality
     hamburger.addEventListener('click', function() {
@@ -65,28 +65,10 @@ rightBtn.addEventListener('click', () => {
         menu.classList.remove('show');
     });
 
-    // Form submission
+    // ✅ Form submission - handled by PHP (no JS interference)
     const form = document.querySelector('form');
     if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const phone = formData.get('phone');
-            const eventType = formData.get('event-type');
-            
-            // Simple validation
-            if (!name || !phone) {
-                alert('Please fill in all required fields (Name and Phone).');
-                return;
-            }
-            
-            // Success message
-            alert(`Thank you ${name}! We will contact you soon regarding your ${eventType || 'request'}.`);
-            this.reset();
-        });
+        // nothing here, form goes directly to save_contact.php
     }
 
     // Add smooth scrolling for CTA button
@@ -106,6 +88,7 @@ rightBtn.addEventListener('click', () => {
         });
     });
 
+    // Keyboard navigation for tabs
     tabLinks.forEach(link => {
         link.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -116,14 +99,12 @@ rightBtn.addEventListener('click', () => {
         });
     });
 
+    // Default tab
     switchTab('home');
 });
 
-
-
+// Header shrink on scroll
 document.addEventListener('DOMContentLoaded', function() {
- 
-
     const header = document.querySelector('.header');
 
     // Shrink header on scroll
@@ -135,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    
+    // Expand header on hover
     header.addEventListener('mouseenter', function() {
         header.classList.remove('small');
     });
@@ -145,9 +126,9 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.add('small');
         }
     });
-
 });
 
+// Extra tab link click (scroll to top)
 document.querySelectorAll('.tab-link').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
